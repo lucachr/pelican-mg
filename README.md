@@ -32,35 +32,35 @@ Anti-Features
 Settings
 --------------
 
-**DESCRIPTION**
+**DESCRIPTION**  
 A brief description of your site, for Open Graph and search engines.
 
-**FOOTER**
+**FOOTER**  
 A custom footer notice.
 
-**LOGO**
+**LOGO**  
 The path of a custom image for replacing the site name in your header bar.
 The path is relative to the "/static/" folder of your site, so if your image
 is placed at "www.example.com/static/img/logo.png", the path to insert is 
 "img/logo.png".
 
-**OG_IMAGE**
+**OG_IMAGE**  
 The path of a custom image for the `og:image` meta property. As for **LOGO**,
 the path is relative to the "/static/" folder of your site.
 
-**OG_IMAGE_TYPE**
+**OG_IMAGE_TYPE**  
 The MIME type for **OG_IMAGE**.
 
-**OG_IMAGE_WIDTH**
+**OG_IMAGE_WIDTH**  
 The width of **OG_IMAGE**. 
 
-**OG_IMAGE_HEIGHT**
+**OG_IMAGE_HEIGHT**  
 The heigth of **OG_IMAGE**.
 
-**SHARE**
+**SHARE**  
 Enable share buttons, boolean.
 
-**SOCIAL**
+**SOCIAL**  
 A list of tutples (icon, URL). The icons are from [Font Awesome]
 (http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is stripped
 away in the bottom icons of the small screen layout.

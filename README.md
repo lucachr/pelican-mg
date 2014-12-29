@@ -63,8 +63,8 @@ Enable share buttons, boolean.
 **SOCIAL**  
 A list of tutples (icon, URL). The icons are from [Font Awesome]
 (http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is stripped
-away in the bottom icons of the small screen layout.
-e.g.
+away in the bottom icons of the small screen layout.  
+e.g.  
 ```python
     SOCIAL = (('twitter', 'https://twitter.com/luca_chr'),
               ('google-plus-square', 'https://plus.google.com/117284397605208270870'),

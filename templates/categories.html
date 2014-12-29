@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %} 
+{% block description %}{% endblock %}
+
+{% block content %}
+<div class="uk-width-medium-4-5">
+    <h1>Categories</h1>
+    {% for category, articles in categories %}
+    <h2><a href="{{ SITEURL}}/{{ category.url}}" class="uk-link-muted">{{ category|capitalize }}</a></h2>
+        {% for article in articles %}
+
+        <article class="uk-article">
+            <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
+            <p class="uk-article-meta">{{ article.locale_date}} • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+            <p class="uk-article-lead">{{ article.summary }}</p>
+            <hr class="uk-article-divider">
+        </article>
+        
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

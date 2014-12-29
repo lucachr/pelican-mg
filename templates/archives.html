@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Archives{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+<div class="uk-width-medium-4-5">
+    <h1>Archives</h1>
+
+    {% for article in dates %}
+    <article class="uk-article">
+        <a href="{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
+        <p class="uk-article-meta">{{ article.locale_date }}</p>
+        <p class="uk-article-lead">{{ article.summary }}</p>
+        <hr class="uk-article-divider">
+    </article>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+
+

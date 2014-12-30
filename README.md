@@ -35,6 +35,11 @@ Anti-Features
 Settings
 --------------
 
+All settings are optional.
+
+**ALT_NAME**
+An alternative name for your site. It appears in the header bar.
+
 **DESCRIPTION**  
 A brief description of your site, for Open Graph and search engines.
 

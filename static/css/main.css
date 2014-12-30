@@ -78,6 +78,8 @@ a {
     color: white; }
 
 .mg-tagline {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
   padding: 1em 0 0;
   color: white; }
 

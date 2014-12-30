@@ -9,6 +9,10 @@ mg is still under development and may do anything it likes up, don't use it on
 a production site! 
 You have been warned!
 
+Live Example
+--------------
+Check out [my blog](http://www.devsbytes.com).
+
 Features
 --------------
 

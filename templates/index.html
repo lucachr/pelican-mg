@@ -10,7 +10,7 @@
                 <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
                 <p class="uk-article-meta">{{ article.locale_date}} • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>{% endif %}</p>
 </p>
-                <p class="uk-article-lead">{{ article.summary }}</p>
+                <p class="uk-article-lead">{{ article.summary|striptags }}</p>
                 <p>{{ ' '.join(article.content.split(' ')[0:100])|striptags }}...</p>
                 <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
                 <hr class="uk-article-divider">

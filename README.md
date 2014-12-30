@@ -37,7 +37,7 @@ Settings
 
 All settings are optional.
 
-**ALT_NAME**
+**ALT_NAME**  
 An alternative name for your site. It appears in the header bar.
 
 **DESCRIPTION**  

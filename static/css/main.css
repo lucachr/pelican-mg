@@ -69,16 +69,13 @@ a {
   padding: 1em 0;
   background-color: #39B39D; }
 
-.mg-brand, .mg-brand-small {
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.mg-brand {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 2.5em;
   color: white; }
-  .mg-brand:hover, .mg-brand-small:hover {
+  .mg-brand:hover {
     color: white; }
-
-.mg-brand > img, .mg-brand-small > img {
-  height: 1em; }
 
 .mg-tagline {
   padding: 1em 0 0;
@@ -100,9 +97,6 @@ a {
 
 .mg-author {
   margin-top: 1em; }
-
-.mg-brand-small {
-  max-width: 100%; }
 
 .mg-icons-small {
   margin-bottom: 1em; }
@@ -138,11 +132,7 @@ a {
   .mg-tagline {
     padding-left: 0 !important; } }
 @media (max-width: 767px) {
-  .mg-brand, .mg-brand-small {
+  .mg-brand {
     padding: 0;
-    max-width: 100%; }
-
-  .mg-brand > img, .mg-brand-small > img {
-    height: 0.8em; } }
-
-/*# sourceMappingURL=main.css.map */
+    max-width: 100%;
+    font-size: 2em; } }

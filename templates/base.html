@@ -59,22 +59,10 @@
     <div class="uk-container uk-container-center">
         <div class="uk-grid" data-uk-grid-margin>
 
-            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">
-                {% if LOGO %}
-                <img src="/static/{{ LOGO }}" alt="{{ SITENAME }}" title="{{ SITENAME }}" class="uk-margin uk-margin-remove">
-                {% else %}
-                {{ SITENAME }}
-                {% endif %}
-                </a>
+            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">{{ SITENAME }}</a>
             <div class="mg-tagline uk-navbar-content uk-hidden-small">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
             <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
-            <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">
-                {% if LOGO %}
-                <img src="/static/{{ LOGO }}" alt="{{ SITENAME }}" title="{{ SITENAME }}" class="uk-margin uk-margin-remove">
-                {% else %}
-                {{ SITENAME }}
-                {% endif %}
-            </a>
+            <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">{{ SITENAME }}</a>
 
         </div>
     </div>

@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="uk-width-medium-4-5">
-    <h1>Tags</h1>
+    <h1 class="uk-heading-large">Tags</h1>
     <ul>
     {% for tag, articles in tags|sort %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>

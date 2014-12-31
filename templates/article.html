@@ -25,7 +25,7 @@
 <div class="uk-width-medium-7-10">
 
     <article class="uk-article">
-        <h1 class="uk-article-title">{{ article.title }}</h1>
+        <h1 class="uk-heading-large uk-article-title">{{ article.title }}</h1>
         <p class="uk-article-meta"> {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %}, <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>{% endif %}</p>
 
         {% if SHARE %}

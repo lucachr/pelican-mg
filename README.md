@@ -16,7 +16,10 @@ Check out [my blog](http://www.devsbytes.com).
 Features
 --------------
 
-* [Open Graph](http://ogp.me/) supports for pages and articles.
+* [Open Graph](http://ogp.me) support for pages and articles.
+* [Twitter Summary Card](https://dev.twitter.com/cards/types/summary) support for pages 
+    and articles.
+* [Schema.org](http://schema.org) support for articles.
 * Comment with DISQUS.
 * Google Analytics.
 * Responsive design.

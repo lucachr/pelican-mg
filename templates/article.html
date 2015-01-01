@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
-{% block description %}{{ article.summary }}{% endblock %}
+{% block description %}{{ article.summary|striptags }}{% endblock %}
 {% block content %}
 <div class="mg-container-social uk-width-medium-1-10 uk-hidden-small">
 
@@ -24,9 +24,9 @@
 
 <div class="uk-width-medium-7-10">
 
-    <article class="uk-article">
-        <h1 class="uk-heading-large uk-article-title">{{ article.title }}</h1>
-        <p class="uk-article-meta"> {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %}, <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>{% endif %}</p>
+    <article class="uk-article" itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 class="uk-heading-large uk-article-title" itemprop="name">{{ article.title }}</h1>
+        <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %}, <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
 
         {% if SHARE %}
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url }}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> Share</a>
@@ -34,8 +34,8 @@
         <a href="https://plus.google.com/share?url={{ SITEURL }}/{{ article.url }}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> Share</a>
         {% endif %}
 
-        <p class="uk-article-lead">{{ article.summary|striptags }}</p>
-        {{ article.content }}
+        <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
+        <div itemprop="articleBody">{{ article.content }}</div>
         <hr class="uk-article-divider">
     </article>
 

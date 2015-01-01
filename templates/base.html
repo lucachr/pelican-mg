@@ -98,7 +98,7 @@
                     {% endif %}
 
                     <li class="uk-nav-divider"></li>
-                    <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+                    <li {% if page_name == 'archives' %}class="uk-active"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
                 </ul>
             </div>
 

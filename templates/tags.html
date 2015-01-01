@@ -5,10 +5,15 @@
 {% block content %}
 <div class="uk-width-medium-4-5">
     <h1 class="uk-heading-large">Tags</h1>
-    <ul>
     {% for tag, articles in tags|sort %}
-        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-    {% endfor %}
+    <h2><a href="{{ SITEURL }}/{{ tag.url }}" class="uk-link-muted">{{ tag }}</a> ({{ articles|count }})</h2>
+    {% for article in articles %}
+    <ul class="uk-list uk-list-space">
+        <li>
+            <a href="{{ article.url }}">{{ article.title }}</a>
+        </li>
     </ul>
+    {% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}

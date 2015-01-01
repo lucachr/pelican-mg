@@ -9,7 +9,9 @@
     {% for article in dates %}
     <article class="uk-article">
         <a href="{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
-        <p class="uk-article-meta">{{ article.locale_date }}</p>
+        <p class="uk-article-meta">
+            <time datetime="{{ article.date.strftime('%Y-%m-%d') }}">{{ article.locale_date }}</time>
+        </p>
         <p class="uk-article-lead">{{ article.summary }}</p>
         <hr class="uk-article-divider">
     </article>

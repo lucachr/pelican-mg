@@ -9,8 +9,8 @@
 <meta name="twitter:title" content="{{ article.title|capitalize }}" />
 <meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}" />
 {% if article.summary %}
-<meta property="og:description" content="{{ article.summary }}" />
-<meta name="twitter:description" content="{{ article.summary }}" />
+<meta property="og:description" content="{{ article.summary|striptags }}" />
+<meta name="twitter:description" content="{{ article.summary|striptags }}" />
 {% endif %}
 {% if article.date %}
 <meta property="og:article:published_time" content="{{ article.date }}">
@@ -25,12 +25,12 @@
 <meta property="og:article:tag" content="{{ tag }}">
 {% endfor %}
 {% if article.image %}
-<meta property="og:image" content="{{ SITEURL }}/static/{{ article.image }}" />
-<meta name="twitter:image" content="{{ SITEURL }}/static/{{ article.image }}" />
-{% elif OG_IMAGE%}
-<meta property="og:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta property="og:image" content="{{ article.image }}" />
+<meta name="twitter:image" content="{{ article.image }}" />
+{% elif OG_IMAGE %}
+<meta property="og:image" content="{{ OG_IMAGE }}" />
 <meta property="og:image:type" content="{{ OG_IMAGE_TYPE }}" />
-<meta name="twitter:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta name="twitter:image" content="{{ OG_IMAGE }}" />
 {% endif %}
 
 {% endblock %}

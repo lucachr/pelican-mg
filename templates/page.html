@@ -8,16 +8,16 @@
 <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
 <meta name="twitter:url" content="{{ SITEURL }}/{{ page.url }}" />
 {% if page.image %}
-<meta property="og:image" content="{{ SITEURL }}/static/{{ page.image }}" />
-<meta name="twitter:image" content="{{ SITEURL }}/static/{{ page.image }}" />
+<meta property="og:image" content="{{ page.image }}" />
+<meta name="twitter:image" content="{{ page.image }}" />
 {% elif OG_IMAGE %}
-<meta property="og:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta property="og:image" content="{{ OG_IMAGE }}" />
 <meta property="og:image:type" content="{{ OG_IMAGE_TYPE }}" />
-<meta name="twitter:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta name="twitter:image" content="{{ OG_IMAGE }}" />
 {% endif %}
 {% if page.summary %}
-<meta property="og:description" content="{{ page.summary }}" />
-<meta name="twitter:description" content="{{ page.summary }}" />
+<meta property="og:description" content="{{ page.summary|striptags }}" />
+<meta name="twitter:description" content="{{ page.summary|striptags }}" />
 {% endif %}
 {% endblock %}
 

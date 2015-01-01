@@ -1,7 +1,10 @@
 mg
 ==============
 
-A minimal theme with a green header bar for [Pelican](http://blog.getpelican.com/).
+A minimal theme with a green header bar for [Pelican]
+(http://blog.getpelican.com/).
+The theme is currently suited for a single author blog without tag pages and 
+blogroll. Feeds are provided via ATOM.
 
 Warning
 --------------
@@ -16,29 +19,25 @@ Check out [my blog](http://www.devsbytes.com).
 Features
 --------------
 
-* [Open Graph](http://ogp.me) support for pages and articles.
-* [Twitter Summary Card](https://dev.twitter.com/cards/types/summary) support for pages 
-    and articles.
-* [Schema.org](http://schema.org) support for articles.
+* [Open Graph](http://ogp.me) support.
+* [Twitter Summary Card](https://dev.twitter.com/cards/types/summary) support.
+* [Schema.org](http://schema.org) support.
+* Responsive design.
 * Comment with DISQUS.
 * Google Analytics.
-* Responsive design.
 * Share buttons built with share urls.
-* Meta tags for description, author and copyright.
 * Custom footer notice.
-
-Anti-Features
---------------
-
-* Support only a single author blog
-* Support only ATOM feeds
-* Currently blogroll is disabled
-* Tag and tags pages style needs to be improved.
 
 Settings
 --------------
 
-All settings are optional.
+```python
+    TAG_SAVE_AS = ''
+    AUTHOR_SAVE_AS = ''
+    DIRECT_TEMPLATES = ('index', 'categories', 'archives')
+```
+
+###Optional settings
 
 **ALT_NAME**  
 An alternative name for your site. It appears in the header bar.
@@ -46,22 +45,20 @@ An alternative name for your site. It appears in the header bar.
 **DESCRIPTION**  
 A brief description of your site, for Open Graph and search engines.
 
+**FAVICON**
+The relative path of your favicon, this is usefull for Disqus forum favicon.
+
 **FOOTER**  
 A custom footer notice.
 
-**OG_IMAGE**  
-The path of a custom image for the `og:image` meta property.
-The path is relative to the "/static/" folder of your site, so if your image
-is placed at "www.example.com/static/img/pic.png", the path to insert is "img/pic.png"
+**META_IMAGE**  
+The path, as absolute URL, of a custom image for the `og:image` meta 
+property and Twitter summary card. This image is used in every page of the blog. 
+Articles and pages can override the default **META_IMAGE** by setting the 
+"image" metadata in the relative file.  
 
-**OG_IMAGE_TYPE**  
-The MIME type for **OG_IMAGE**.
-
-**OG_IMAGE_WIDTH**  
-The width of **OG_IMAGE**. 
-
-**OG_IMAGE_HEIGHT**  
-The heigth of **OG_IMAGE**.
+**META_IMAGE_TYPE**  
+The MIME type for **META_IMAGE**, this is usefull for `og:image:type`.
 
 **SHARE**  
 Enable share buttons, boolean.

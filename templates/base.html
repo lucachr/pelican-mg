@@ -24,10 +24,10 @@
 <meta property="og:description" content="{{ DESCRIPTION }}" />
 <meta name="twitter:description" content="{{ DESCRIPTION }}" />
 {% endif %}
-{% if OG_IMAGE %}
-<meta property="og:image" content="{{ OG_IMAGE }}" />
-<meta property="og:image:type" content="{{ OG_IMAGE_TYPE }}" />
-<meta name="twitter:image" content="{{ OG_IMAGE }}" />
+{% if META_IMAGE %}
+<meta property="og:image" content="{{ META_IMAGE }}" />
+<meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
+<meta name="twitter:image" content="{{ META_IMAGE }}" />
 {% endif %}
 {% endblock %}
 <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed"/>

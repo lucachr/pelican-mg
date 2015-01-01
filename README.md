@@ -48,6 +48,9 @@ A brief description of your site, for Open Graph and search engines.
 **FAVICON**
 The relative path of your favicon, this is usefull for Disqus forum favicon.
 
+**FAVICON_TYPE**
+The MIME type of your favicon, this is usefull for Disqus forum favicon.
+
 **FOOTER**  
 A custom footer notice.
 

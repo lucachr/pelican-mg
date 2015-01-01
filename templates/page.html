@@ -1,6 +1,26 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title|capitalize }}{% endblock %}
 {% block description %}{% endblock %}
+
+{% block seo %}
+<meta property="og:title" content="{{ page.title|capitalize }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+<meta name="twitter:url" content="{{ SITEURL }}/{{ page.url }}" />
+{% if page.image %}
+<meta property="og:image" content="{{ SITEURL }}/static/{{ page.image }}" />
+<meta name="twitter:image" content="{{ SITEURL }}/static/{{ page.image }}" />
+{% elif OG_IMAGE %}
+<meta property="og:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta property="og:image:type" content="{{ OG_IMAGE_TYPE }}" />
+<meta name="twitter:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+{% endif %}
+{% if page.summary %}
+<meta property="og:description" content="{{ page.summary }}" />
+<meta name="twitter:description" content="{{ page.summary }}" />
+{% endif %}
+{% endblock %}
+
 {% block content %}        
 <div class="uk-width-medium-4-5">
     <h1 class="uk-heading-large">{{ page.title }}</h1>
@@ -10,6 +30,4 @@
 
     {{ page.content }}
 </div>
-
-
 {% endblock %}

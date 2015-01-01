@@ -1,0 +1,13 @@
+{% block seo %}
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ SITEURL }}" />
+<meta name="twitter:url" content="{{ SITEURL }}" />
+{% if OG_IMAGE %}
+<meta property="og:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+<meta property="og:image:type" content="{{ OG_IMAGE_TYPE }}" />
+<meta name="twitter:image" content="{{ SITEURL }}/static/{{ OG_IMAGE }}" />
+{% endif %}
+{% endblock %}
+
+

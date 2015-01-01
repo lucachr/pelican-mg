@@ -6,26 +6,39 @@
 {% if articles %}
 {% for article in articles %}
 
-            <article class="uk-article">
-                <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
-                <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>{% endif %}</p>
+    {% if loop.index == 1 %}
+            <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
+                <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted" itemprop="name">{{ article.title }}</a>
+                <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
 </p>
-                <p class="uk-article-lead">{{ article.summary|striptags }}</p>
+                <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
+                <section itemprop="articleBody">{{ article.content }}</section>
+                <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>
+                <hr class="uk-article-divider">
+            </article>
+    {% else %}
+        <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
+                <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted" itemprop="name">{{ article.title }}</a>
+                <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
+</p>
+                <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
                 <p>{{ ' '.join(article.content.split(' ')[0:100])|striptags }}...</p>
                 <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
                 <hr class="uk-article-divider">
-            </article>
+        </article>
+    {% endif %}
 
-            {% if DEFAULT_PAGINATION  and articles_paginator.num_pages > 1 %}
-            <ul class="uk-pagination">
-                {% if articles_previous_page %}<li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="uk-icon-angle-double-left"></i></a></li>{% endif %}
-                {% if articles_previous_page %}<li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">{{ articles_previous_page.number }}</a></li>{% endif %}
-                <li class="uk-active"><span>{{ articles_page.number }}</span></li>
-                {% if articles_next_page %}<li><a href="{{ SITEURL }}/{{ articles_next_page.url }}"><i class="uk-icon-angle-double-right"></i></a></li>{% endif %}
-                {% if articles_next_page %}<li><a href="{{ SITEURL }}/{{ articles_next_page.url }}">{{ articles_next_page.number }}</a></li>{% endif %}
-            </ul>
-            {% endif %}
 {% endfor %}
+{% if DEFAULT_PAGINATION  and articles_paginator.num_pages > 1 %}
+    <ul class="uk-pagination">
+        {% if articles_previous_page %}<li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="uk-icon-angle-double-left"></i></a></li>{% endif %}
+        {% if articles_previous_page %}<li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">{{ articles_previous_page.number }}</a></li>{% endif %}
+        <li class="uk-active"><span>{{ articles_page.number }}</span></li>
+        {% if articles_next_page %}<li><a href="{{ SITEURL }}/{{ articles_next_page.url }}"><i class="uk-icon-angle-double-right"></i></a></li>{% endif %}
+        {% if articles_next_page %}<li><a href="{{ SITEURL }}/{{ articles_next_page.url }}">{{ articles_next_page.number }}</a></li>{% endif %}
+    </ul>
+{% endif %}
+
 {% endif %}
 </div>
 {% endblock %}

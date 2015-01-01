@@ -2,17 +2,19 @@
 {% block title %}Archives{% endblock %}
 {% block description %}{% endblock %}
 
+{% include 'common_seo.html' %}
+
 {% block content %}
 <div class="uk-width-medium-4-5">
     <h1 class="uk-heading-large">Archives</h1>
 
     {% for article in dates %}
-    <article class="uk-article">
-        <a href="{{ article.url }}" class="uk-article-title uk-link-muted">{{ article.title }}</a>
+    <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
+        <a href="{{ article.url }}" class="uk-article-title uk-link-muted" itemprop="name url">{{ article.title }}</a>
         <p class="uk-article-meta">
-            <time datetime="{{ article.date.strftime('%Y-%m-%d') }}">{{ article.locale_date }}</time>
+            <time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time>
         </p>
-        <p class="uk-article-lead">{{ article.summary }}</p>
+        <p class="uk-article-lead" itemprop="description">{{ article.summary }}</p>
         <hr class="uk-article-divider">
     </article>
     {% endfor %}

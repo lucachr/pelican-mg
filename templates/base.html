@@ -47,6 +47,7 @@
 <div class="uk-hidden" itemtype="http://schema.org/Blog" itemscope="itemscope">
     <meta itemprop="name" content="{{ SITENAME }}" />
     <meta itemprop="description" content="{{ DESCRIPTION  }}" />
+    {% if META_IMAGE %}<meta itemprop="image" content="{{ META_IMAGE }}" />{% endif %}
 </div>
 
 <header class=" mg-header uk-navbar uk-navbar-attached">

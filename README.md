@@ -69,7 +69,7 @@ The MIME type for **META_IMAGE**, this is usefull for `og:image:type`.
 Your PIWIK URL.
 
 **PIKIW_SITE_ID**   
-The idsite of the website you are tracking with piwik.
+The idsite of the website you are tracking with PIWIK.
 
 **SHARE**  
 Enable share buttons, boolean.

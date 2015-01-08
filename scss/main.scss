@@ -1,0 +1,234 @@
+$baseGreen: #39B39D;
+$accentGreen: #28D1B2;
+$feedOrange: #FF6600;
+$twitterBlue: #00B0ED;
+$facebookBlue: #3B5999;
+$googleRed: #D34836;
+$githubBlack: #333;
+$mailBlue: #059;
+$textGrey: #444;
+$ancorBase: #33b5e5;
+$ancorOver: #0099cc;
+
+// Base style
+
+html {
+    font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a {
+    color: $ancorBase;
+    &:hover {
+        color: $ancorOver;
+    }
+}
+
+// uikit override
+
+.uk-navbar-brand {
+    text-transform: uppercase;
+}
+
+.uk-article-meta {
+    & > a {
+    color: $textGrey;
+
+        &:hover {
+            color: $textGrey;
+        }
+    }
+
+    & > .uk-icon-comment {
+        color: $textGrey;
+    }
+}
+
+.uk-icon-twitter {
+    color: $twitterBlue;
+}
+
+.uk-icon-facebook, .uk-icon-facebook-square {
+    color: $facebookBlue;
+}
+
+.uk-icon-google-plus, .uk-icon-google-plus-square {
+    color: $googleRed;
+}
+
+.uk-icon-github {
+    color: $githubBlack;
+}
+
+.uk-icon-envelope {
+    color: $textGrey;
+}
+
+.uk-nav-side > li.uk-active > a {
+    background: $accentGreen;
+}
+
+.uk-pagination>.uk-active>span {
+    background: $accentGreen;   
+}
+
+.uk-icon-medium {
+    margin-right: 0.3em;
+}
+
+.uk-navbar-toggle {
+    color: white;
+
+    &:hover, &:focus {
+        color: white;
+    }
+}
+
+.uk-nav-offcanvas {
+    & > li > a {
+        border-top: 1px solid rgba(0,0,0,.3);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
+
+        &:last-child {
+            border-bottom: 1px solid rgba(0,0,0,.3);
+        }
+    }
+ 
+    & .uk-nav-divider {
+        border-top: 1px solid rgba(255,255,255,.01);
+        margin: 0;
+        height: 4px;
+        background: rgba(0,0,0,.2);
+        box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+    }
+}
+
+
+.uk-nav-offcanvas .uk-nav-header {
+    margin-top: 0;
+    background: #404040;
+    border-top: 1px solid rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+}
+
+// mg style
+
+.mg-header {
+    padding: 1em 0;
+    // Green style
+    background-color: $baseGreen;
+}
+
+.mg-brand {
+    font: {
+        family: "Open Sans", sans-serif;
+        style: italic;
+        size: 2.5em;
+    }
+
+    // Green style
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+    }
+    
+    @media (max-width: 767px) {
+        padding: 0;
+        max-width: 100%;
+        font-size: 2em;
+    }
+
+}
+
+.mg-tagline {
+    font: {
+        family: "Open Sans", sans-serif;
+        weight: 800;
+    }
+    padding: 1em 0 0;
+    color: white;
+
+    @media (min-width: 1220px) {
+        padding-left: 0 !important;
+    }
+
+}
+
+.mg-main {
+    margin: {
+        top: 4em;
+        bottom: 3em;
+    }
+    min-height: 100%;
+}
+
+.mg-feed {
+    color: $feedOrange;
+    &:hover {
+        text-decoration: none;
+        color: $feedOrange;
+    }
+}
+
+.mg-footer {
+    margin-bottom: 1em;
+}
+
+.mg-author {
+    margin-top: 1em;
+}
+
+.mg-icons-small {
+    margin-bottom: 1em;
+}
+
+.mg-icons-small {
+    &>li>a {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .uk-icon-rss {
+        background-color: $feedOrange;
+    }
+
+    .uk-icon-twitter {
+        background-color: $twitterBlue;
+    }
+
+    .uk-icon-facebook {
+        background-color: $facebookBlue;
+    }
+
+    .uk-icon-google-plus {
+        background-color: $googleRed;
+    }
+
+    .uk-icon-github {
+        background-color: $githubBlack;
+    }
+
+    .uk-icon-envelope {
+        background-color: $mailBlue;
+    }
+}
+
+.mg-badges li {
+    float: left;
+    position: relative;
+}
+
+// Browser Upgrade
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

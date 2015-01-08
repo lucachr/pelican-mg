@@ -22,9 +22,10 @@ Features
 * [Open Graph](http://ogp.me) support.
 * [Twitter Summary Card](https://dev.twitter.com/cards/types/summary) support.
 * [Schema.org](http://schema.org) support.
+* Search with [Tipue Search](http://www.tipue.com/search).
 * Responsive design.
 * Comment with DISQUS.
-* Google Analytics.
+* Analytics with Google Analytics, PIWIK and StatCounter.
 * Share buttons built with share urls.
 * Custom footer notice.
 
@@ -34,7 +35,8 @@ Settings
 ```python
     TAG_SAVE_AS = ''
     AUTHOR_SAVE_AS = ''
-    DIRECT_TEMPLATES = ('index', 'categories', 'archives')
+    DIRECT_TEMPLATES = ('index', 'categories', 'archives', 'search', 'tipue_search')
+    TIPUE_SEARCH_SAVE_AS = 'tipue_search.json'
 ```
 
 ###Optional settings
@@ -63,6 +65,12 @@ Articles and pages can override the default **META_IMAGE** by setting the
 **META_IMAGE_TYPE**  
 The MIME type for **META_IMAGE**, this is usefull for `og:image:type`.
 
+**PIWIK_URL**  
+Your PIWIK URL.
+
+**PIKIW_SITE_ID**   
+The idsite of the website you are tracking with piwik.
+
 **SHARE**  
 Enable share buttons, boolean.
 
@@ -70,6 +78,13 @@ Enable share buttons, boolean.
 A list of tutples (icon, URL). The icons are from [Font Awesome]
 (http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed 
 in the footer icons of the small screen layout.  
+
+**SC_PROJECT**   
+The StatCounter project number.  
+
+**SC_SECURITY**   
+The StatCounter security code for the project.
+
 e.g.  
 ```python
     SOCIAL = (('twitter', 'https://twitter.com/luca_chr'),

@@ -1,0 +1,16 @@
+{
+    "pages": [
+        {% set len = (articles + pages)| length %}
+        {% for item in articles + pages %}
+        {
+            "title": "{{item.title|striptags|e}}", 
+            "text":"{{item.content|striptags|e}}", 
+            "tags": "{{item.category}}", 
+            "loc": "{{ SITEURL }}/{{item.url}}"
+        }{% if loop.index < len %},
+        {% else %}
+        
+        {% endif %}
+        {% endfor %}
+    ]
+}

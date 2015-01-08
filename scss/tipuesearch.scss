@@ -1,0 +1,127 @@
+/*!
+ * Tipue Search 4.0
+ * Copyright (c) 2014 Tipue
+ * Tipue Search is released under the MIT License
+ * http://www.tipue.com/search
+ *
+ * This is a modified version of the Tipue Search plugin style sheet,
+ * edited for the pelican mg theme.
+ * If you are looking for the original Tipue Search plugin style sheet 
+ * check the project home at http://www.tipue.com/search.
+ */
+
+$baseText: #444;
+
+@mixin animation($values) {
+    -webkit-animation: $values;
+    -moz-animation: $values;
+    -o-animation: $values;
+    animation: $values;
+}
+
+#tipue_search_content {
+    max-width: 650px;
+    padding-top: 15px;
+    margin: 0;
+}
+
+#tipue_search_loading:before {
+    padding-top: 60px;     
+    font-family: FontAwesome;
+    content: "\f013";
+    background: #fff no-repeat left;
+    @include animation(fa-spin 2s infinite linear);
+}
+
+#tipue_search_warning_head {
+    font: 300 15px/1.6 'Open Sans', sans-serif;
+    color: #555;
+}
+
+#tipue_search_warning {
+    font: 300 13px/1.6 'Open Sans', sans-serif;
+    color: #333;
+    margin: 7px 0;
+}
+
+#tipue_search_warning a {
+    color: #36c;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+#tipue_search_warning a:hover {
+    color: #333;  
+}
+
+.tipue_search_content_title {
+    font-size: 2em;
+    line-height: 42px;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 0.5em;
+} 
+
+.tipue_search_content_title a {
+    color: $baseText;
+    text-decoration: none;
+    &:hover {
+        color: $baseText;    
+        text-decoration: underline;
+    }
+}
+
+.tipue_search_content_url {
+    display: none;
+}
+
+.tipue_search_content_text {
+    margin-top: 3px;
+}
+
+.h01 {
+    font-weight: bold;
+}
+
+#tipue_search_foot {
+    margin: 51px 0 21px 0;
+}
+
+#tipue_search_foot_boxes {
+    padding: 0;
+    margin: 0;
+    font: 12px/1 'Open Sans', sans-serif;
+}
+
+#tipue_search_foot_boxes li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#tipue_search_foot_boxes li a {
+    padding: 9px 15px 10px 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #dcdcdc;
+    border-radius: 1px;
+    color: #333;
+    margin-right: 7px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#tipue_search_foot_boxes li.current {
+    padding: 9px 15px 10px 15px;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 1px;
+    color: #333;
+    margin-right: 7px;
+    text-align: center;
+}
+
+#tipue_search_foot_boxes li a:hover {
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}

@@ -34,6 +34,8 @@
 <link href='//fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/css/uikit.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/css/components/search.min.css">
+<link rel="stylesheet" href="/theme/css/tipuesearch.css">
 <link rel="stylesheet" href="/theme/css/solarized.css">
 <link rel="stylesheet" href="/theme/css/main.css">
 
@@ -74,8 +76,14 @@
         {% endblock %} 
     
         <div class="uk-width-medium-1-5 uk-hidden-small">
+            
             <div class="uk-panel uk-panel-box">
-                <!--<h3 class="uk-panel-title">Categories</h3> -->
+                <form class="uk-search" action="search.html" data-uk-search>
+                    <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
+                </form>
+            </div>
+
+            <div class="uk-panel uk-panel-box">
                 <ul class="uk-nav uk-nav-side">
                     <li class="uk-nav-header">Categories</li>
                     {% for cat, _ in categories %}
@@ -145,6 +153,11 @@
 
 <div id="mg-offcanvas" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
+
+        <form class="uk-search" action="search.html" data-uk-search>
+            <input class="uk-search-field" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
+        </form>
+
         <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li class="uk-nav-header">Categories</li>
             {% for cat, _ in categories %}
@@ -169,8 +182,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/js/uikit.min.js"></script>
-<script src="/theme/js/jquery.sticky-kit.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/js/components/search.min.js"></script>
+<script src="/theme/js/jquery.sticky-kit.js"></script>
+<script src="/theme/js/tipuesearch_set.js"></script>
+<script src="/theme/js/tipuesearch.js"></script>
 <script src="/theme/js/plugins.js"></script>
 <script src="/theme/js/main.js"></script>
 

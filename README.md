@@ -74,18 +74,17 @@ The idsite of the website you are tracking with PIWIK.
 **SHARE**  
 Enable share buttons, boolean.
 
-**SOCIAL**  
-A list of tutples (icon, URL). The icons are from [Font Awesome]
-(http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed 
-in the footer icons of the small screen layout.  
-
 **SC_PROJECT**   
 The StatCounter project number.  
 
 **SC_SECURITY**   
 The StatCounter security code for the project.
 
-e.g.  
+**SOCIAL**  
+A list of tutples (icon, URL). The icons are from [Font Awesome]
+(http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed 
+in the footer icons of the small screen layout.   
+e.g.   
 ```python
     SOCIAL = (('twitter', 'https://twitter.com/luca_chr'),
               ('google-plus-square', 'https://plus.google.com/117284397605208270870'),

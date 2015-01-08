@@ -71,14 +71,14 @@ Your PIWIK URL.
 **PIKIW_SITE_ID**   
 The idsite of the website you are tracking with PIWIK.
 
-**SHARE**  
-Enable share buttons, boolean.
-
 **SC_PROJECT**   
 The StatCounter project number.  
 
 **SC_SECURITY**   
 The StatCounter security code for the project.
+
+**SHARE**  
+Enable share buttons, boolean.
 
 **SOCIAL**  
 A list of tutples (icon, URL). The icons are from [Font Awesome]

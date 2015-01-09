@@ -7,23 +7,27 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
 <meta name="twitter:url" content="{{ SITEURL }}/{{ page.url }}" />
+<meta itemprop="url" content="{{ SITEURL }}/{{ page.url }}"/>
 {% if page.image %}
 <meta property="og:image" content="{{ page.image }}" />
 <meta name="twitter:image" content="{{ page.image }}" />
+<meta itemprop="image" content="{{ page.image }}">
 {% elif META_IMAGE %}
 <meta property="og:image" content="{{ META_IMAGE }}" />
 <meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
 <meta name="twitter:image" content="{{ META_IMAGE }}" />
+<meta itemprop="image" content="{{ SITEURL }}/{{ META_IMAGE }}"/>
 {% endif %}
 {% if page.summary %}
 <meta property="og:description" content="{{ page.summary|striptags }}" />
 <meta name="twitter:description" content="{{ page.summary|striptags }}" />
+<meta itemprop="description" content="{{ page.summary|striptags }}"/>
 {% endif %}
 {% endblock %}
 
 {% block content %}        
 <div class="uk-width-medium-4-5">
-    <h1 class="uk-heading-large">{{ page.title }}</h1>
+    <h1 class="uk-heading-large" itemprop="name">{{ page.title }}</h1>
     
     {% block page_content %}
     {% endblock %}

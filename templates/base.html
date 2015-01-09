@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 7]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 8]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="{{ DEFAULT_LANG }}" class="no-js" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+{% if article %}
+<!--[if lt IE 7]>      <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ DEFAULT_LANG }}" class="no-js" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <!--<![endif]-->
+{% elif page %}
+<!--[if lt IE 7]>      <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ DEFAULT_LANG }}" class="no-js" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
+{% else %}
+<!--[if lt IE 7]>      <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ DEFAULT_LANG }}" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ DEFAULT_LANG }}" class="no-js" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
+{% endif %}
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,14 +32,18 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ SITEURL }}" />
 <meta name="twitter:url" content="{{ SITEURL }}" />
+<meta itemprop="name" content="{{ SITENAME }}" />
+<meta itemprop="url" content="{{ SITEURL }}"/>
 {% if DESCRIPTION %}
 <meta property="og:description" content="{{ DESCRIPTION }}" />
 <meta name="twitter:description" content="{{ DESCRIPTION }}" />
+<meta itemprop="description" content="{{ DESCRIPTION  }}" />
 {% endif %}
 {% if META_IMAGE %}
 <meta property="og:image" content="{{ META_IMAGE }}" />
 <meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
 <meta name="twitter:image" content="{{ META_IMAGE }}" />
+<meta itemprop="image" content="{{ META_IMAGE }}" />
 {% endif %}
 {% endblock %}
 <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed"/>
@@ -45,12 +61,6 @@
 <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-<div class="uk-hidden" itemtype="http://schema.org/Blog" itemscope="itemscope">
-    <meta itemprop="name" content="{{ SITENAME }}" />
-    <meta itemprop="description" content="{{ DESCRIPTION  }}" />
-    {% if META_IMAGE %}<meta itemprop="image" content="{{ META_IMAGE }}" />{% endif %}
-</div>
 
 <header class=" mg-header uk-navbar uk-navbar-attached">
 

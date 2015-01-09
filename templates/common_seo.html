@@ -3,10 +3,13 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ SITEURL }}" />
 <meta name="twitter:url" content="{{ SITEURL }}" />
+<meta itemprop="name" content="{{ SITENAME }}">
+<meta itemprop="url" content="{{ SITEURL }}">
 {% if META_IMAGE %}
 <meta property="og:image" content="{{ META_IMAGE }}" />
 <meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
 <meta name="twitter:image" content="{{ META_IMAGE }}" />
+<meta itemprop="image" content="{{ META_IMAGE }}"/>
 {% endif %}
 {% endblock %}
 

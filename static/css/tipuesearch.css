@@ -25,11 +25,11 @@
   animation: fa-spin 2s infinite linear; }
 
 #tipue_search_warning_head {
-  font: 300 15px/1.6 'Open Sans', sans-serif;
+  font: 300 15px/1.6;
   color: #555; }
 
 #tipue_search_warning {
-  font: 300 13px/1.6 'Open Sans', sans-serif;
+  font: 300 13px/1.6;
   color: #333;
   margin: 7px 0; }
 
@@ -68,9 +68,9 @@
   margin: 51px 0 21px 0; }
 
 #tipue_search_foot_boxes {
+  font-size: 0.75em;
   padding: 0;
-  margin: 0;
-  font: 12px/1 'Open Sans', sans-serif; }
+  margin: 0; }
 
 #tipue_search_foot_boxes li {
   list-style: none;

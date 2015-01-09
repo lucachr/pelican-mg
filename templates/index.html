@@ -22,7 +22,7 @@
                 <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
 </p>
                 <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
-                <p>{{ ' '.join(article.content.split(' ')[0:100])|striptags }}...</p>
+                <p>{{ ' '.join(article.content.split(' ')[0:75])|striptags }}...</p>
                 <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
                 <hr class="uk-article-divider">
         </article>

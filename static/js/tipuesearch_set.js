@@ -16,6 +16,7 @@ var tipuesearch_replace = {"words": [
 
 var tipuesearch_stem = {"words": [
      {"word": "e-mail", "stem": "email"},
-     {"word": "javascript", "stem": "js"}
+     {"word": "javascript", "stem": "js"},
+     {"word": "nightmare.js", "stem": "nightmarejs"}
 ]};
 

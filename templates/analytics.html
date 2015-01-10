@@ -2,7 +2,11 @@
 <!-- Piwik -->
 <script type="text/javascript">
 var _paq = _paq || [];
-(function(){ var u=(("https:" == document.location.protocol) ? "https://{{ PIWIK_URL }}/" : "http://{{ PIWIK_URL }}/");
+(function(){ {% if PIWIK_SSL_URL %}
+ var u=(("https:" == document.location.protocol) ? "https://{{ PIWIK_SSL_URL }}/" : "http://{{ PIWIK_URL }}/");
+ {% else %}
+var u=(("https:" == document.location.protocol) ? "https://{{ PIWIK_URL }}/" : "http://{{ PIWIK_URL }}/");
+{% endif %}
  _paq.push(['setSiteId', {{ PIWIK_SITE_ID }}]);
  _paq.push(['setTrackerUrl', u+'piwik.php']);
  _paq.push(['trackPageView']);

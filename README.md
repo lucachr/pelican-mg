@@ -5,6 +5,27 @@ A minimal theme for [Pelican](http://blog.getpelican.com/) that uses uikit.
 The theme is suited for a single author blog without tag pages nor
 blogroll. Feeds are provided via ATOM.
 
+
+Screenshots 
+--------------
+
+Here is how the home page look like
+
+![mg home page screenshot](https://raw.githubusercontent.com/lucachr/pelican-mg/master/home-page-screenshot.png)
+
+This is the article page
+
+![mg article page screenshot](https://raw.githubusercontent.com/lucachr/pelican-mg/master/article-screenshot.png)
+
+The home page on a smartphone 
+
+![mg home page smartphone top screenshot](https://github.com/lucachr/pelican-mg/blob/master/home-page-smartphone-top.png)
+![mg home page smartphone bottom screenshot](https://github.com/lucachr/pelican-mg/blob/master/home-page-smartphone-bottom.png)
+
+This is the article layout on a smartphone screen
+
+![mg article page smartphone top screenshot](https://raw.githubusercontent.com/lucachr/pelican-mg/master/article-page-smartphone-top.png)
+
 Live Example
 --------------
 Check out [my blog](http://www.devsbytes.com).

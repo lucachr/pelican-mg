@@ -64,10 +64,10 @@ An alternative name for your site. It appears in the header bar.
 **DESCRIPTION**  
 A brief description of your site, for social networks and search engines.
 
-**FAVICON**
+**FAVICON**  
 The relative path of your favicon, this is needed for Disqus forum favicon.
 
-**FAVICON_TYPE**
+**FAVICON_TYPE**  
 The MIME type of your favicon, this is needed for Disqus forum favicon.
 
 **FOOTER**  

@@ -116,6 +116,9 @@ a {
 .mg-author {
   margin-top: 1em; }
 
+.mg-icon-link:hover {
+  text-decoration: none; }
+
 .mg-icons-small {
   margin-bottom: 1em; }
 

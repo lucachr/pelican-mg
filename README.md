@@ -92,7 +92,7 @@ The StatCounter security code for the project.
 Enable share buttons, boolean.
 
 **SOCIAL**  
-A list of tutples (icon, URL). The icons are from [Font Awesome]
+A list of tuples (icon, URL). The icons are from [Font Awesome]
 (http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed 
 in the footer icons of the small screen layout.   
 e.g.   

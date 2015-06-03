@@ -162,9 +162,9 @@ This is the settings file for Dev's Bytes.
     DELETE_OUTPUT_DIRECTORY = True
 
     TWITTER_USERNAME = 'luca_chr'
-    DISQUS_SITENAME = "devsbytes"
-    SC_PROJECT = '10224955'
-    SC_SECURITY = '1f2cc438'
+    # DISQUS_SITENAME = "devsbytes"
+    # SC_PROJECT = '10224955'
+    # SC_SECURITY = '1f2cc438'
 
 ```
 

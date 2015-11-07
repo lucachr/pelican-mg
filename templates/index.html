@@ -4,7 +4,7 @@
 <div class="uk-width-medium-4-5">
 
 {% if articles %}
-{% for article in articles %}
+{% for article in (articles_page.object_list if articles_page else articles) %}
 
     {% if loop.index == 1 %}
             <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">

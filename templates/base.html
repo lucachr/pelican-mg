@@ -49,9 +49,11 @@
 <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed"/>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/css/uikit.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/css/components/search.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/uikit.min.css">
+{% if ENABLE_SEARCH %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/components/search.min.css">
 <link rel="stylesheet" href="/theme/css/tipuesearch.css">
+{% endif %}
 <link rel="stylesheet" href="/theme/css/solarized.css">
 <link rel="stylesheet" href="/theme/css/main.css">
 
@@ -86,12 +88,13 @@
         {% endblock %} 
     
         <div class="uk-width-medium-1-5 uk-hidden-small">
-            
+            {% if ENABLE_SEARCH %}
             <div class="uk-panel uk-panel-box">
                 <form class="uk-search" action="search.html" data-uk-search>
                     <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
                 </form>
             </div>
+            {% endif %}
 
             <div class="uk-panel uk-panel-box">
                 <ul class="uk-nav uk-nav-side">
@@ -191,13 +194,19 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/js/uikit.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/js/components/search.min.js"></script>
-<script src="/theme/js/jquery.sticky-kit.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/js/uikit.min.js"></script>
+{% if ENABLE_SEARCH %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/js/components/search.min.js"></script>
 <script src="/theme/js/tipuesearch_set.js"></script>
 <script src="/theme/js/tipuesearch.js"></script>
+{% endif %}
+<script src="/theme/js/jquery.sticky-kit.js"></script>
 <script src="/theme/js/plugins.js"></script>
+{% if ENABLE_SEARCH %}
+<script src="/theme/js/main-search.js"></script>
+{% else %}
 <script src="/theme/js/main.js"></script>
+{% endif %}
 
 {% include 'disqus_count.html' %}
 {% include 'analytics.html' %}

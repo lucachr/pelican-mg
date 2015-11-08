@@ -4,14 +4,13 @@
 <div class="uk-width-medium-4-5">
 
 {% if articles %}
-{% for article in articles %}
+{% for article in (articles_page.object_list if articles_page else articles) %}
 
     {% if loop.index == 1 %}
             <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
                 <a href="{{ SITEURL }}/{{ article.url }}" class="uk-article-title uk-link-muted" itemprop="name">{{ article.title }}</a>
                 <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
 </p>
-                <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
                 <section itemprop="articleBody">{{ article.content }}</section>
                 <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a>
                 <hr class="uk-article-divider">
@@ -22,7 +21,6 @@
                 <p class="uk-article-meta"><time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="datePublished">{{ article.locale_date }}</time> • <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if DISQUS_SITENAME %} • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" itemprop="discussionUrl"></a>{% endif %}</p>
 </p>
                 <p class="uk-article-lead" itemprop="description">{{ article.summary|striptags }}</p>
-                <p>{{ ' '.join(article.content.split(' ')[0:75])|striptags }}...</p>
                 <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
                 <hr class="uk-article-divider">
         </article>

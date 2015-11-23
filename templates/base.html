@@ -65,14 +65,12 @@
 <header class=" mg-header uk-navbar uk-navbar-attached">
 
     <div class="uk-container uk-container-center">
-        <div class="uk-grid" data-uk-grid-margin>
 
-            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
-            <div class="mg-tagline uk-navbar-content uk-hidden-small">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
-            <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
-            <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
+        <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
+        <div class="mg-tagline uk-navbar-content uk-hidden-small">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
+        <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
+        <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
 
-        </div>
     </div>
 </header>
 
@@ -81,12 +79,12 @@
 <div class="uk-container uk-container-center">
 
     <div class="uk-grid" data-uk-grid-margin>
-        
+
         {% block content %}
-        {% endblock %} 
-    
+        {% endblock %}
+
         <div class="uk-width-medium-1-5 uk-hidden-small">
-            
+
             <div class="uk-panel uk-panel-box">
                 <form class="uk-search" action="search.html" data-uk-search>
                     <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
@@ -101,13 +99,13 @@
                     {% endfor %}
                     {% if DISPLAY_PAGES_ON_MENU != False %}
                     <li class="uk-nav-header">Pages</li>
-                    
+
                     {% for p in PAGES %}
                     <li {% if p == page %}class="uk-active"{% endif %}>
                         <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
                     </li>
                     {% endfor %}
-                    
+
                     {% endif %}
 
                     <li class="uk-nav-divider"></li>
@@ -119,7 +117,7 @@
                 <h3 class="uk-panel-title">Receive Updates</h3>
                 <a rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="mg-feed"><i class="uk-icon-rss uk-icon-medium"></i> ATOM</a>
             </div>
-            
+
             {% if SOCIAL %}
             <div class="uk-panel uk-panel-box">
                 <h3 class="uk-panel-title">Contacts</h3>
@@ -158,7 +156,7 @@
 
             <p>Powered by <a href="http://blog.getpelican.com">Pelican</a>.<br class="uk-visible-small"> Theme <a href="https://github.com/lucachr/pelican-mg">mg</a> by <a href="https://github.com/lucachr">Luca Chiricozzi</a>.</p>
         </div>
-    </div> 
+    </div>
 </footer>
 
 <div id="mg-offcanvas" class="uk-offcanvas">
@@ -174,13 +172,13 @@
             <li {% if cat == category %}class="uk-active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
             {% endfor %}
             {% if DISPLAY_PAGES_ON_MENU != False %}
-            <li class="uk-nav-header">Pages</li>        
+            <li class="uk-nav-header">Pages</li>
             {% for p in PAGES %}
             <li {% if p == page %}class="uk-active"{% endif %}>
                 <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
             </li>
             {% endfor %}
-                    
+
             {% endif %}
 
             <li class="uk-nav-divider"></li>

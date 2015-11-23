@@ -68,7 +68,7 @@ a {
 }
 
 .uk-pagination>.uk-active>span {
-    background: $accentGreen;   
+    background: $accentGreen;
 }
 
 .uk-icon-medium {
@@ -93,7 +93,7 @@ a {
             border-bottom: 1px solid rgba(0,0,0,.3);
         }
     }
- 
+
     & .uk-nav-divider {
         border-top: 1px solid rgba(255,255,255,.01);
         margin: 0;
@@ -126,6 +126,7 @@ a {
         style: italic;
         size: 2.5em;
     }
+    padding-left: 0;
 
     // Green style
     color: white;
@@ -134,7 +135,7 @@ a {
     &:hover {
         color: white;
     }
-    
+
     @media (max-width: 767px) {
         padding: 0;
         max-width: 100%;

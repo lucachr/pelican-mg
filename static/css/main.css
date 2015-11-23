@@ -76,7 +76,7 @@ a {
   padding-left: 0;
   color: white;
   text-decoration: none; }
-  .mg-brand:hover {
+  .mg-brand:hover, .mg-brand:focus {
     color: white; }
   @media (max-width: 767px) {
     .mg-brand {

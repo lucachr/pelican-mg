@@ -64,6 +64,7 @@ If you want to use mg with search disabled.
     TAG_SAVE_AS = ''
     AUTHOR_SAVE_AS = ''
     DIRECT_TEMPLATES = ('index', 'categories', 'archives')
+    DISABLE_SEARCH = True
 ```
 
 ###Optional settings

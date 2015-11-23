@@ -49,11 +49,21 @@ Settings
 
 The following settings are required for a correct behaviour of this theme.
 
+If you want to use the theme with search enabled (and probably you want it).
+
 ```python
     TAG_SAVE_AS = ''
     AUTHOR_SAVE_AS = ''
     DIRECT_TEMPLATES = ('index', 'categories', 'archives', 'search', 'tipue_search')
     TIPUE_SEARCH_SAVE_AS = 'tipue_search.json'
+```
+
+If you want to use mg with search disabled.
+
+```python
+    TAG_SAVE_AS = ''
+    AUTHOR_SAVE_AS = ''
+    DIRECT_TEMPLATES = ('index', 'categories', 'archives')
 ```
 
 ###Optional settings
@@ -63,6 +73,9 @@ An alternative name for your site. It appears in the header bar.
 
 **DESCRIPTION**  
 A brief description of your site, for social networks and search engines.
+
+**DISABLE_SEARCH**  
+Disable search, boolean.
 
 **FAVICON**  
 The relative path of your favicon, this is needed for Disqus forum favicon.

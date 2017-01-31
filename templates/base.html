@@ -104,7 +104,7 @@
                     {% if DISPLAY_PAGES_ON_MENU != False %}
                     <li class="uk-nav-header">Pages</li>
 
-                    {% for p in PAGES %}
+                    {% for p in pages %}
                     <li {% if p == page %}class="uk-active"{% endif %}>
                         <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
                     </li>
@@ -179,7 +179,7 @@
             {% endfor %}
             {% if DISPLAY_PAGES_ON_MENU != False %}
             <li class="uk-nav-header">Pages</li>
-            {% for p in PAGES %}
+            {% for p in pages %}
             <li {% if p == page %}class="uk-active"{% endif %}>
                 <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
             </li>

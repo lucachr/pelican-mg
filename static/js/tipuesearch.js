@@ -32,9 +32,6 @@ http://www.tipue.com/search
                var tipuesearch_in = {
                     pages: []
                };
-               $.ajaxSetup({
-                    async: false
-               });
 
                if (set.mode == 'live')
                {

@@ -3,7 +3,6 @@ $accentGreen: #28D1B2;
 $feedOrange: #FF6600;
 $twitterBlue: #00B0ED;
 $facebookBlue: #3B5999;
-$googleRed: #D34836;
 $githubBlack: #333;
 $mailBlue: #059;
 $textGrey: #444;
@@ -49,10 +48,6 @@ a {
 
 .uk-icon-facebook, .uk-icon-facebook-square {
     color: $facebookBlue;
-}
-
-.uk-icon-google-plus, .uk-icon-google-plus-square {
-    color: $googleRed;
 }
 
 .uk-icon-github {
@@ -217,10 +212,6 @@ a {
 
     .uk-icon-facebook {
         background-color: $facebookBlue;
-    }
-
-    .uk-icon-google-plus {
-        background-color: $googleRed;
     }
 
     .uk-icon-github {

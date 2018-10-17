@@ -22,9 +22,6 @@ a {
 .uk-icon-facebook, .uk-icon-facebook-square {
   color: #3B5999; }
 
-.uk-icon-google-plus, .uk-icon-google-plus-square {
-  color: #D34836; }
-
 .uk-icon-github {
   color: #333; }
 
@@ -133,8 +130,6 @@ a {
   background-color: #00B0ED; }
 .mg-icons-small .uk-icon-facebook {
   background-color: #3B5999; }
-.mg-icons-small .uk-icon-google-plus {
-  background-color: #D34836; }
 .mg-icons-small .uk-icon-github {
   background-color: #333; }
 .mg-icons-small .uk-icon-envelope {
@@ -149,4 +144,3 @@ a {
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
-

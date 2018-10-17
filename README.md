@@ -6,7 +6,7 @@ The theme is suited for a single author blog without tag pages nor
 blogroll. Feeds are provided via ATOM.
 
 
-Screenshots 
+Screenshots
 --------------
 
 Here is how the home page look like
@@ -17,7 +17,7 @@ This is the article page
 
 ![mg article page screenshot](https://raw.githubusercontent.com/lucachr/pelican-mg/master/article-screenshot.png)
 
-The home page on a smartphone 
+The home page on a smartphone
 
 ![mg home page smartphone top screenshot](https://github.com/lucachr/pelican-mg/blob/master/home-page-smartphone-top.png)
 ![mg home page smartphone bottom screenshot](https://github.com/lucachr/pelican-mg/blob/master/home-page-smartphone-bottom.png)
@@ -88,9 +88,9 @@ The MIME type of your favicon, this is needed for Disqus forum favicon.
 A custom footer notice.
 
 **META_IMAGE**  
-The absolute URL of a custom image for the `og:image` meta property, Twitter 
-summary card, and `image` meta property of Schema.org. This image is used in 
-every page of the blog. Articles and pages can override the default 
+The absolute URL of a custom image for the `og:image` meta property, Twitter
+summary card, and `image` meta property of Schema.org. This image is used in
+every page of the blog. Articles and pages can override the default
 **META_IMAGE** by setting the "image" metadata in the relative file.  
 
 **META_IMAGE_TYPE**  
@@ -107,12 +107,11 @@ Enable share buttons, boolean.
 
 **SOCIAL**  
 A list of tuples (icon, URL). The icons are from [Font Awesome]
-(http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed 
+(http://fortawesome.github.io/Font-Awesome/). The suffix "-square" is removed
 in the footer icons of the small screen layout.   
 e.g.   
 ```python
     SOCIAL = (('twitter', 'https://twitter.com/luca_chr'),
-              ('google-plus-square', 'https://plus.google.com/117284397605208270870'),
               ('github', 'https://github.com/lucachr'),
               ('envelope', 'mailto:luca92web@gmail.com'),)
 ```
@@ -150,7 +149,6 @@ This is the settings file for Dev's Bytes.
 
     # Social widget
     SOCIAL = (('twitter', 'https://twitter.com/luca_chr'),
-              ('google-plus-square', 'https://plus.google.com/+LucaChiricozzi'),
               ('github', 'https://github.com/lucachr'),
               ('envelope', 'mailto:luca92web@gmail.com'),)
 

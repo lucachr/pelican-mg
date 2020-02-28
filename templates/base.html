@@ -90,7 +90,7 @@
             {% if not DISABLE_SEARCH %}
             <div class="uk-panel uk-panel-box">
                 <form class="uk-search" action="search.html" data-uk-search>
-                    <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
+                    <input class="uk-search-field tipue_search" type="{{ SITEURL }}/search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
                 </form>
             </div>
             {% endif %}
@@ -167,7 +167,7 @@
     <div class="uk-offcanvas-bar">
 
         {% if not DISABLE_SEARCH %}
-        <form class="uk-search" action="search.html" data-uk-search>
+        <form class="uk-search" action="{{ SITEURL }}/search.html" data-uk-search>
             <input class="uk-search-field" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
         </form>
         {% endif %}
